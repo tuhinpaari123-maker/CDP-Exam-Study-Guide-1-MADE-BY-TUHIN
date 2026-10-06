@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="CDP Exam Practice — Domain 1: Decarbonization Drivers. 100 multiple-choice practice questions.">
+  <title>CDP Exam Practice | Domain 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#" id="brandHome"><span class="brand-mark">CDP</span><span>Exam Practice<small>DOMAIN 1 · DECARBONIZATION DRIVERS</small></span></a><span class="top-tag">100 QUESTION BANK</span></header>
+  <main class="shell">
+    <section id="startScreen" class="panel start-panel">
+      <div class="eyebrow">CDP EXAM PREPARATION</div><h1>Domain 1:<br><span>Decarbonization Drivers</span></h1>
+      <p class="lead">Build confidence with 100 scenario-based multiple-choice questions, immediate feedback, and explanations drawn from your question bank.</p>
+      <div class="stats"><div><strong>100</strong><span>Questions</span></div><div><strong>4</strong><span>Options each</span></div><div><strong>∞</strong><span>Practice again</span></div></div>
+      <label class="toggle-row"><input type="checkbox" id="shuffleToggle" checked><span><b>Shuffle questions</b><small>Mix up the question order each time you begin.</small></span></label>
+      <label class="toggle-row"><input type="checkbox" id="explainToggle" checked><span><b>Show explanations after checking</b><small>Learn why an answer is correct.</small></span></label>
+      <button class="btn btn-primary btn-wide" id="startBtn">Start practice <span aria-hidden="true">→</span></button>
+      <p class="fine-print">Practice tool for study purposes. Your progress stays in this browser session.</p>
+    </section>
+
+    <section id="quizScreen" class="hidden">
+      <div class="quiz-meta"><span class="pill" id="topicPill">TOPIC</span><span id="countLabel">Question 1 of 100</span></div>
+      <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div id="progressFill"></div></div>
+      <article class="panel question-panel">
+        <div class="question-head"><span class="question-number" id="questionNumber">01</span><div><div class="eyebrow">KNOWLEDGE CHECK</div><h2 id="questionText"></h2></div></div>
+        <div id="optionsList" class="options-list" role="group" aria-label="Answer options"></div>
+        <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+        <div class="quiz-actions"><button class="btn btn-quiet" id="prevBtn">← Previous</button><div class="right-actions"><button class="btn btn-primary" id="checkBtn">Check answer</button><button class="btn btn-primary hidden" id="nextBtn">Next question →</button></div></div>
+      </article>
+      <div class="bottom-meta"><span id="checkedLabel">0 checked</span><span id="scoreLabel">0 correct</span><button id="finishBtn" class="text-btn">Finish and review</button></div>
+    </section>
+
+    <section id="resultsScreen" class="hidden panel results-panel">
+      <div class="eyebrow">PRACTICE COMPLETE</div><h1 id="resultHeading">Your results</h1><p class="lead" id="resultSummary"></p>
+      <div class="result-score"><strong id="percentScore">0%</strong><span>score</span></div>
+      <div class="stats result-stats"><div><strong id="correctCount">0</strong><span>Correct</span></div><div><strong id="wrongCount">0</strong><span>Incorrect</span></div><div><strong id="unansweredCount">0</strong><span>Unanswered</span></div></div>
+      <div class="results-actions"><button class="btn btn-primary" id="retryBtn">Try again</button><button class="btn btn-secondary" id="homeBtn">Back to start</button></div>
+      <div class="review-header"><h2>Answer review</h2><label class="filter-label">Show <select id="reviewFilter"><option value="all">All questions</option><option value="wrong">Incorrect</option><option value="unanswered">Unanswered</option><option value="correct">Correct</option></select></label></div>
+      <div id="reviewList" class="review-list"></div>
+    </section>
+    <footer><span>CDP Exam Practice · Domain 1</span><span>Static website · GitHub Pages ready</span></footer>
+  </main>
+  <script src="questions.js"></script><script src="script.js"></script>
+</body>
+</html>
